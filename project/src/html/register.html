@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/common.css" />
+        <link rel="stylesheet" href="../css/base.css" />
+        <link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="../jquery-confirm/jquery-confirm.css" />
+
+
+        <!-- 模块化请求 -->
+        <script src="https://cdn.bootcss.com/require.js/2.3.5/require.js" data-main='../../dist/module.min'></script>
+    </head>
+
+
+
+    <body>
+        <div class="register">
+            <div class="container">
+                <h1>
+                    <img src="https://img.miyabaobei.com/d1/p5/2016/11/15/6e/92/6e9213dbef73af424807b48100a7933a762928174.png" alt="" />
+                </h1>
+
+                <a href="https://itunes.apple.com/cn/app/mi-ya-bao-bei-zhong-guo-zui/id973366293?mt=8" title="iPhone系列手机及ipad适用"></a>
+
+                <a href="https://download.miyabaobei.com/Miababy_localhost_V6.4.0.apk" target="_blank" title="三星小米索尼华为等android手机适用" class="download"></a>
+                
+                <img src="https://img.miyabaobei.com/d1/p5/2016/11/15/d0/07/d007602602b2889dca7a8b7dbd43cb3a963181367.png" class="mm" />
+
+                <div class="login">
+                    <div class="login_t">
+                        免费注册
+                    </div>
+
+                    <form action="" method="post">
+                        <div class="inputWrap">
+                        <i class="fa fa-user"></i>
+                        <input type="text"  id="username"  placeholder="手机号"/>
+                        </div>
+
+                        <input type="password" id='pwd' placeholder="密码"/>
+
+
+                        <input type="button" value="获取短信验证码" id="btn_ck"/>
+                        <input type="button" value="注册" id="btn_register" />
+                    </form>
+
+                    <p>使用以下账号登录：
+                        <a href="javescript:">
+                            <i class="fa fa-weixin"></i>
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="buttom">
+Copyright ©2018 蜜缇（上海）网络科技有限公司 Miyabaobei.com 保留一切权利。客服热线： 400-789-2000。沪ICP备16004431号-2
+        </div>
+
+
+        <script>
+            // document.getElementById('btn_register').onclick = function(){
+            //     var params = {
+            //         username: document.getElementById('username').value,
+            //         pwd: document.getElementById('pwd').value
+            //     }
+
+            //     //手机号码验证
+            //     if(!/^1[3-9][\d]{9}$/.test(params.username || params.username == "")){
+            //         alert('请输入正确的手机格式')
+            //         return false;
+            //     }
+
+
+            //     if(params.pwd == ""){
+            //         alert("请输入密码")
+            //         return false;
+            //     }
+
+            //     $.ajax({
+            //         api: 'api/register.php',
+            //         method: 'post',
+            //         params,
+            //         success: function(res){
+            //             var r = window.eval('(' + res + ')');
+            //             if(r.status){
+            //                 window.location.href = 'http://localhost:83/src/html/login.html';
+            //             }
+
+            //             if(r.status == false){
+            //                 alert('用户已注册');
+            //             }
+            //         }
+            //     })
+            // }
+
+            // $(function(){
+            //     $('#btn_register').click(function(){
+            //         http.post('api/register.php', {username: $('#username').val().trim(),
+            //                 pwd: $('#pwd').val().trim()}, function(_res){
+            //                         console.log(_res);
+            //                         var r = window.eval('(' + _res + ')');
+            //                         console.log(r)
+            //                         if(r.status){
+            //                             console.log(333)
+            //                             window.location.href = 'http://localhost:83/src/html/login.html'
+            //             }
+            //                         if(r.status == false){
+            //                             $.alert('用户已注册');
+            //             }
+
+            //         })
+            //     })
+            // })
+    </script>
+
+    
+    </body>
+</html>

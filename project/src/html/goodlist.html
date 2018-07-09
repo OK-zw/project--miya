@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <style type="text/css">
+            li{
+                float: left;
+                list-style: none;
+            }
+
+            li img{
+                float:left;
+                width: 267px;
+                height: 267px;
+            }
+
+            body ul{
+                width: 1100px;  
+                overflow: hidden;
+                margin:0 auto;
+            }
+
+
+            .dspn li{
+                position: relative;
+                padding:2px 8px;
+                background: #ccc;
+                margin: 0 5px;
+                right:-800px;
+            }
+
+            li.actived{
+                background:orange;
+                color:#fff;
+           }
+        </style>
+        <link rel="stylesheet" type="text/css" href="../font-awesome/css/font-awesome.min.css" />
+
+        <link rel="stylesheet" type="text/css" href="../css/base.css" />
+        <link rel="stylesheet" href="../css/index.css" />
+
+        <script src="../js/ajax.js"></script>
+        
+    </head>
+
+    <body>
+        <header>
+            <div class="top">
+                <div class="container">
+                    <div class="fl">
+                        <i class="fa fa-mobile fa-lg"></i>
+                        <a href="#" class="hue">手机蜜芽</a>
+                    </div>
+                    <div class="fr top_r">
+                        <ul>
+                            <li><span>你好，欢迎来到蜜芽！</span></li>
+                            <li><span><a href="#" class="hue">我的订单</a></span></li>
+                            <li><span><a href="http://localhost:83/src/html/register.html" class="hue">免费注册</a></span></li>
+                            <li><span><a href="#" class="hue">帮助中心</a></span></li>
+                            <li><span><a href="http://localhost:83/src/html/login.html" class="hue">退出</a></span></li>
+                        </ul>
+                        <em>|</em>
+                    </div>
+                </div>
+            </div>
+            <div class="seek">
+                <div class="container">
+                    <a href="https://www.mia.com/" class="logo fl" >
+                        <img src="../css/img/logo.png"/>
+                    </a>
+                    <div class="fr seekr">
+                        <div class="clearfix">
+                            <input type="text" class="text fl" />
+                            <input type="button" value="搜索" class="btn_seek" />
+                        </div>
+                        <div class="cart fr">
+                            <a href="#" class="cart_item">
+                                <i class="fa fa-shopping-cart fa-lg fl"></i>
+                                <i class="fl cart_content">购物车</i>
+                            </a>
+
+    
+                            <div class="cart-more">
+                                <span></span>
+                                购物车还没有商品，快去选购吧！
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav">
+                <div class="container">
+                    <div class="menus fl">
+                        <div class="menus_t">
+                            <h3>商品分类</h3>
+                        </div>
+                        <div class="menus_b" style="display:none">
+                            <dl>
+                                <dt>
+                                    <div class="inner t_inner">
+                                        <strong>
+                                            <a href="#">奶粉/纸尿裤</a>
+                                        </strong>
+                                        <p>
+                                            <a href="#">婴儿奶粉</a>
+                                            <a href="#">羊奶粉</a>
+                                            <a href="#">特配奶粉</a>
+                                            <a href="#">拉拉裤</a>
+                                            <a href="#">宝宝湿巾</a>
+                                            <a href="#">德国爱他美</a>
+                                            <i class="fa fa-arrow-right"></i>
+                                        </p>
+                                    </div>
+                                </dt>
+                                <dd>
+                                    <div class="colums fl">
+                                        <div class="colum">
+                                            <h3>奶粉专区</h3>
+                                            <p class="pp">
+                                                <a href="https://www.mia.com/s/cat13_tid1013.html" target="_blank">婴儿奶粉</a>
+
+                                                <a href="https://www.mia.com/s/cat15_tid1014.html" target="_blank">成长奶粉</a>
+
+                                                <a href="https://www.mia.com/s/cat156_tid1015.html" target="_blank">羊奶粉</a>
+
+                                                <a href="https://www.mia.com/s/cat17_tid1016.html" target="_blank">特配奶粉</a>
+
+                                                <a href="https://www.mia.com/s/cat19_tid1017.html" target="_blank">妈妈奶粉</a>
+
+                                                <a href="https://www.mia.com/s/cat253_tid1022.html" target="_blank">成人奶粉</a>
+                                            </p>
+                                        </div>
+
+
+
+                                        <div class="colum">
+                                            <div class="colum">
+                                                <h3>屁屁护理</h3>
+                                                <p class="pp">
+                                                    <a href="https://www.mia.com/s/cat18_tid694.html" target="_blank">纸尿裤</a>
+
+                                                    <a href="https://www.mia.com/s/cat16_tid692.html" target="_blank">拉拉裤</a>
+
+                                                    <a href="https://www.mia.com/s/cat25_tid696.html" target="_blank">隔尿垫/布尿裤</a>
+
+                                                    <a href="https://www.mia.com/s/cat23_tid695.html" target="_blank">宝宝湿巾</a>
+                                                </p>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="colum">
+                                            <h3>全球奶粉大牌</h3>
+                                            <p class="pp2">
+                                                <a href="https://www.mia.com/s/cat18_tid694.html" target="_blank">德国爱他美</a>
+
+                                                <a href="https://www.mia.com/s/cat16_tid692.html" target="_blank">德国Hipp</a>
+
+                                                <a href="https://www.mia.com/s/cat25_tid696.html" target="_blank">德国Topfer</a>
+
+                                                <a href="https://www.mia.com/s/cat23_tid695.html" target="_blank">荷兰Nutrilon</a>
+
+
+                                                <a href="https://www.mia.com/s/cat18_tid694.html" target="_blank">英国Cow&Gate</a>
+
+                                                <a href="https://www.mia.com/s/cat16_tid692.html" target="_blank">德国holle</a>
+
+                                                <a href="https://www.mia.com/s/cat25_tid696.html" target="_blank">英国Aptamil</a>
+
+                                                <a href="https://www.mia.com/s/cat23_tid695.html" target="_blank">授权行货惠氏启赋</a>
+
+
+
+                                                <a href="https://www.mia.com/s/cat18_tid694.html" target="_blank">港版美赞成</a>
+
+                                                <a href="https://www.mia.com/s/cat16_tid692.html" target="_blank">授权行货爱他美</a>
+
+                                                <a href="https://www.mia.com/s/cat25_tid696.html" target="_blank">授权行货若优能</a>
+
+                                                <a href="https://www.mia.com/s/cat23_tid695.html" target="_blank">授权行货 喜宝</a>
+
+                                                <a href="https://www.mia.com/s/cat25_tid696.html" target="_blank">美国MeadJohnson</a>
+                                            </p>
+                                        </div>
+                                        <div class="colum">
+                                            <h3>全球纸尿裤大牌</h3>
+                                            <p class="pp3">
+                                                 <a href="https://www.mia.com/s/cat18_tid694.html" target="_blank">尤妮佳</a>
+
+                                                <a href="https://www.mia.com/s/cat16_tid692.html" target="_blank">花王</a>
+
+                                                <a href="https://www.mia.com/s/cat25_tid696.html" target="_blank">GOON大王天使</a>
+
+                                                <a href="https://www.mia.com/s/cat23_tid695.html" target="_blank">Pampers帮宝适</a>
+
+
+
+                                                <a href="https://www.mia.com/s/cat18_tid694.html" target="_blank">Huggies Gold好奇金装</a>
+
+                                                <a href="https://www.mia.com/s/cat16_tid692.html" target="_blank">Huggies platinum好奇铂金装</a>
+
+                                                <a href="https://www.mia.com/s/cat25_tid696.html" target="_blank">Mamaypoko 妈咪宝贝</a>
+
+                                                <a href="https://www.mia.com/s/cat23_tid695.html" target="_blank">Libero丽贝乐</a>
+
+                                                <a href="https://www.mia.com/s/cat18_tid694.html" target="_blank">Bella Baby Happy贝拉宝贝</a>
+
+                                                <a href="https://www.mia.com/s/cat16_tid692.html" target="_blank">BioFities爱婴舒坦</a>
+
+                                                <a href="https://www.mia.com/s/cat25_tid696.html" target="_blank">BAMBO班博</a>
+
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="brands fr">
+                                        <h3>热卖大牌</h3>
+                                        <a href="https://www.mia.com/s/b526.html">
+                                            <img src="https://img03.miyabaobei.com/d1/p3/brand/526_brand_logo_img1459856922.jpg" alt="" />
+                                        </a>
+
+                                        <a href="https://www.mia.com/s/b526.html">
+                                            <img src="https://img03.miyabaobei.com/d1/p3/brand/175_brand_logo_img1459857796.jpg" alt="" />
+                                        </a>
+
+                                        <a href="https://www.mia.com/s/b526.html">
+                                            <img src="https://img03.miyabaobei.com/d1/p3/brand/44_brand_logo_img1460020310.jpg" alt="" />
+                                        </a>
+
+                                        <a href="https://www.mia.com/s/b526.html">
+                                            <img src="https://img03.miyabaobei.com/d1/p3/brand/189_brand_logo_img1459857574.jpg" alt="" />
+                                        </a>
+
+                                        <a href="https://www.mia.com/s/b526.html">
+                                            <img src="https://img03.miyabaobei.com/d1/p5/brand/192_brand_logo_img1467099328.jpg" alt="" />
+                                        </a>
+
+                                        <a href="https://www.mia.com/s/b526.html">
+                                            <img src="https://img03.miyabaobei.com/d1/p3/brand/1_brand_logo_img1459490969.jpg" alt="" />
+                                        </a>
+
+                                        <a href="https://www.mia.com/s/b526.html">
+                                            <img src="https://img03.miyabaobei.com/d1/p3/brand/8_brand_logo_img1459491005.jpg" alt="" />
+                                        </a>
+
+                                        <a href="https://www.mia.com/s/b526.html">
+                                            <img src="https://img03.miyabaobei.com/d1/p3/brand/425_brand_logo_img1459490793.png" alt="" />
+                                        </a>
+
+                                        <a href="https://www.mia.com/s/b526.html">
+                                            <img src="https://img03.miyabaobei.com/d1/p3/brand/1206_brand_logo_img1459491133.jpg" alt="" />
+                                        </a>
+                                    </div>
+                                </dd>
+                            </dl>
+
+
+
+
+                            <dl>
+                                <dt>
+                                    <div class="inner">
+                                        <strong>
+                                            <a href="#">辅食/喂养/洗护</a>
+                                        </strong>
+                                        <p>
+                                            <a href="#">米粉</a>
+                                            <a href="#">果泥/肉泥</a>
+                                            <a href="#">溶豆/泡芙</a>
+                                            <a href="#">磨牙饼干</a>
+                                            <a href="#">鱼油/DHA</a>
+                                            <a href="#">钙铁锌</a>
+                                            <i class="fa fa-arrow-right"></i>
+                                        </p>
+                                    </div>
+                                </dt>
+                                <dd></dd>
+                            </dl>
+
+                            <dl>
+                                <dt>
+                                    <div class="inner">
+                                        <strong>
+                                            <a href="#">孕妈用品</a>
+                                        </strong>
+                                        <p>
+                                            <a href="#">孕妇装/孕妇裙</a>
+                                            <a href="#">待产/月子用品</a>
+                                            <a href="#">防辐射服</a>
+                                            <a href="#">孕期营养</a>
+                                            <i class="fa fa-arrow-right"></i>
+                                        </p>
+                                    </div>
+                                </dt>
+                                <dd></dd>
+                            </dl>
+
+                            <dl>
+                                <dt>
+                                    <div class="inner">
+                                        <strong>
+                                            <a href="#">童装/童鞋/寝居</a>
+                                        </strong>
+                                        <p>
+                                            <a href="#">新生儿礼盒</a>
+                                            <a href="#">连身衣/爬服</a>
+                                            <a href="#">T恤/POLO衫</a>
+                                            <a href="#">亲子装</a>
+                                            <a href="#">太阳镜</a>
+                                            <i class="fa fa-arrow-right"></i>
+                                        </p>
+                                    </div>
+                                </dt>
+                                <dd></dd>
+                            </dl>
+
+                            <dl>
+                                <dt>
+                                    <div class="inner">
+                                        <strong>
+                                            <a href="#">玩具/书籍/出行</a>
+                                        </strong>
+                                        <p>
+                                            <a href="#">益智</a>
+                                            <a href="#">毛绒/安抚</a>
+                                            <a href="#">牙胶/咬咬胶</a>
+                                            <a href="#">戏水/游泳装备</a>
+                                            <a href="#">中文绘本</a>
+                                            <i class="fa fa-arrow-right"></i>
+                                        </p>
+                                    </div>
+                                </dt>
+                                <dd></dd>
+                            </dl>
+
+                            <dl>
+                                <dt>
+                                    <div class="inner">
+                                        <strong>
+                                            <a href="#">美妆/个护/轻奢</a>
+                                        </strong>
+                                        <p>
+                                            <a href="#">防晒/隔离</a>
+                                            <a href="#">化妆水/爽肤水</a>
+                                            <a href="#">面膜</a>
+                                            <a href="#">套装礼盒</a>
+                                            <a href="#">美体塑身</a>
+                                            <i class="fa fa-arrow-right"></i>
+                                        </p>
+                                    </div>
+                                </dt>
+                                <dd></dd>
+                            </dl>
+
+                            <dl>
+                                <dt>
+                                    <div class="inner">
+                                        <strong>
+                                            <a href="#">美食/保健</a>
+                                        </strong>
+                                        <p>
+                                            <a href="#">干果/果干</a>
+                                            <a href="#">休闲零食</a>
+                                            <a href="#">地方特产</a>
+                                            <a href="#">胶原蛋白</a>
+                                            <a href="#">酵素</a>
+                                            <a href="#">蔓越莓/葡萄籽</a>
+                                            <i class="fa fa-arrow-right"></i>
+                                        </p>
+                                    </div>
+                                </dt>
+                                <dd></dd>
+                            </dl>
+
+                            <dl>
+                                <dt>
+                                    <div class="inner">
+                                        <strong>
+                                            <a href="#">家居/清洁</a>
+                                        </strong>
+                                        <p>
+                                            <a href="#">奶瓶清洁</a>
+                                            <a href="#">消毒液/柔顺剂</a>
+                                            <a href="#">宝宝湿巾</a>
+                                            <a href="#">床上用品</a>
+                                            <a href="#">家居纸品</a>
+                                            <i class="fa fa-arrow-right"></i>
+                                        </p>
+                                    </div>
+                                </dt>
+                                <dd></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <ul class="fl navs">
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">纸尿裤</a></li>
+                        <li><a href="#">奶粉</a></li>
+                        <li class="rotate">
+                            <a href="#">正品保证</a>
+                            <i class="fa fa-angle-double-down arrows"></i>
+                            <div class="list">
+                                <a href="https://www.mia.com/guarantee" class="ee" target="_blank">
+                                    正品保证
+                                </a>
+                                <a href="https://www.mia.com/help-22.html" class="ee" target="_blank">
+                                    退货政策
+                                </a>
+                                <a href="https://www.mia.com/help.html" class="ee" target="_blank">
+                                    帮助中心
+                                </a>
+                            </div>
+                        </li>
+                        <li><a href="#">早教音乐</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+
+    
+        <script type="text/javascript">
+
+                $.ajax({
+                    api:'api/goodlist.php?qty=16',
+                    method:'post',
+                    success:function(res){
+                        console.log(res);
+                        var r = window.eval('(' + res + ')');
+                        console.log(r);
+                        
+                        var ul = document.createElement('ul');
+                     
+                        ul.innerHTML = r.data.map(function(item){
+                            return `<li>
+                                        <a href="http://localhost:86/project/src/html/commodity.html" target="_blank" data-id="${item.index}"><img src="${item.images}"></a>
+                                        <p>${item.index}</p>
+                                        <p>${item.price}</p>
+                                        <p>${item.name}</p>
+                                    </li>`
+                        }).join('\n')
+                        
+                        document.body.appendChild(ul);
+
+                        var page_item = document.createElement('ul');
+                        page_item.classList.add('dspn');
+                        var page_num = Math.ceil(r.total/r.qty);
+                        console.log(r.total)
+
+                        var content = "";
+                        for(var i = 0;i<page_num; i++){
+                            if(i+1 === r.page){
+                                content += `<li class="actived">${i+1}</li>`;
+                            }else{
+                                content += `<li>${i+1}</li>`;
+                            }
+                        };
+                        page_item.innerHTML = content;
+                        document.body.appendChild(page_item);
+
+                        var dspn = document.getElementsByClassName('dspn')[0];
+                        dspn.onclick = e=>{
+                            if(e.target.tagName.toLowerCase() === 'li'){
+                                $.ajax({
+                                    api:'api/goodlist.php?qty=16&page='+e.target.innerText,
+                                    method:'post',
+                                    success: function(res){
+                                        var r = window.eval('(' + res + ')');
+
+                                        ul.innerHTML = r.data.map(function(item){
+                                            return `<li>
+                                                        <a href="http://localhost:86/project/src/html/commodity.html" target="_blank"><img src="${item.images}"></a>
+                                                        <p>${item.index}</p>
+                                                        <p>${item.price}</p>
+                                                        <p>${item.name}</p>
+                                                    </li>`
+                                        }).join('\n')
+
+
+                                        var content = "";
+                                        var page_num = Math.ceil(r.total/r.qty);
+
+                                            for(var i = 0;i<page_num; i++){
+                                                if(i+1 === r.page){
+                                                    content += `<li class="actived">${i+1}</li>`;
+                                                }else{
+                                                    content += `<li>${i+1}</li>`;
+                                                }
+                                            }
+                                        page_item.innerHTML = content;
+                                    }
+                                })
+                            }
+                        }
+                    }   
+                })
+                
+                     
+        </script>
+    </body>
+</html>
